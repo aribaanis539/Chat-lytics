@@ -11,6 +11,32 @@ st.set_page_config(
     page_icon="💬",
     layout="wide"
 )
+st.markdown("""
+<style>
+/* Increase tab font size */
+button[data-baseweb="tab"] {
+    font-size: 18px !important;
+    padding: 12px 20px !important;
+}
+
+/* Increase tab height */
+div[data-baseweb="tab-list"] {
+    gap: 12px;
+}
+
+/* Active tab styling */
+button[data-baseweb="tab"][aria-selected="true"] {
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    border-bottom: 3px solid #ff4b4b !important;
+}
+
+/* Tab container spacing */
+div[data-testid="stTabs"] {
+    margin-top: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ================== SESSION STATE ==================
 if "run_analysis" not in st.session_state:
@@ -334,3 +360,4 @@ if uploaded_file and st.session_state.run_analysis:
 
 else:
     st.info("👈 Upload a WhatsApp chat file and click **Run Analysis**")
+
