@@ -15,13 +15,13 @@ st.markdown("""
 <style>
 /* Increase tab font size */
 button[data-baseweb="tab"] {
-    font-size: 18px !important;
+    font-size: 22px !important;
     padding: 12px 20px !important;
 }
 
 /* Increase tab height */
 div[data-baseweb="tab-list"] {
-    gap: 12px;
+    gap: 3rem;
 }
 
 /* Active tab styling */
@@ -360,4 +360,5 @@ if uploaded_file and st.session_state.run_analysis:
 
 else:
     st.info("👈 Upload a WhatsApp chat file and click **Run Analysis**")
+
 
